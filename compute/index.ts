@@ -11,6 +11,10 @@ app.listen(port, () => {
 
 // Homepage
 app.get('/', (req: express.Request, res: express.Response) => {
+  const response = `Homepage
+  Deployment Id: ${process.env.AWS_AMPLIFY_DEPLOYMENT_ID}
+  Build time: ${process.env.BUILD_TIME}
+  `
   res.status(200).send("homepage");
 });
 
@@ -54,3 +58,4 @@ app.get('/staticToCompute', (req: express.Request, res: express.Response) => {
 app.get('/ahioToCompute', (req: express.Request, res: express.Response) => {
   res.status(200).header("x-ahio-to-compute-header", "ahio-to-compute-header-value").send("ahio-to-compute");
 });
+

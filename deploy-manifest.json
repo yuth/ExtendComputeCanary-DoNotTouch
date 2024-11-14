@@ -7,8 +7,19 @@
       200,
       1920
     ],
-    "domains": ["images.unsplash.com"],
-    "remotePatterns": [],
+    "domains": ["images.unsplash.com", "image.pbs.org", "image.pbskids.org"],
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "image.pbs.org",
+        "port": ""
+      },
+      {
+        "protocol": "https",
+        "hostname": "image.pbskids.org",
+        "port": ""
+      }
+    ],
     "formats": ["image/jpeg", "image/png", "image/webp", "image/avif"],
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": false
