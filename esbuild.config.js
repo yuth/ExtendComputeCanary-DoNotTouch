@@ -15,8 +15,8 @@ const bundle = async () => {
       target: 'node18',
       sourcesContent: false,
       define: {
-        'process.env.AWS_AMPLIFY_DEPLOYMENT_ID': process.env.AWS_AMPLIFY_DEPLOYMENT_ID,
-        'process.env.BUILD_TIME': new Date().toLocaleTimeString(),
+        'process.env.AWS_AMPLIFY_DEPLOYMENT_ID': `"${process.env.AWS_AMPLIFY_DEPLOYMENT_ID}"`,
+        'process.env.BUILD_TIME': `"${new Date().toLocaleTimeString()}"`,
       }
     }),
   ]);
