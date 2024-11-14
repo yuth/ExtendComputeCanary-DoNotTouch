@@ -16,7 +16,7 @@
         "port": ""
       }
     ],
-    "formats": ["image/jpeg", "image/png", "image/webp", "image/avif"],
+    "formats": [ "image/avif", "image/webp", "image/jpeg", "image/png"],
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": false
   },
